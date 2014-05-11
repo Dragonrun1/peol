@@ -1,4 +1,4 @@
-peol
+Peol
 ====
 
 Php End Of Line is a group of Non-OS specific PHP commands to change line endings on text files.
@@ -15,7 +15,7 @@ fix a file or even a group of them using the dos2unix and unit2dos commands in C
 since it does NOT have those utils. Add to that I've been wanting to learn more about Symfony's Console and this project
 was born.
 
-## INSTALL ##
+## Installing ##
 
 Peol uses Composer and is up on Packagest so if you also use Composer in your project you can just add it. If you do NOT use
 Composer in your project you can still use it to install Peol. First you'll need to install Composer somewhere which you can
@@ -23,12 +23,12 @@ get at https://getcomposer.org/. Once you have composer.phar file you can just p
 Peol to and add a copy of the composer.json file from GitHub there as well. Once you have both files in the directory you
 can run ```php -f "composer.phar" install -o --no-dev```. This should setup Peol so you can use it.
 
-## Using Peol ##
+## Using ##
 
 Using Peol is easy for example to change the line endings of all the txt files in the current directory to Windows (DOS):
 
     php -f where/i/installed/it/bin/peol EolToWin *.txt
-    
+
 For more information on using Peol try ```php -f where/i/installed/it/bin/peol list```.
 
 ## Future ##
