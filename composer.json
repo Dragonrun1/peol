@@ -1,0 +1,25 @@
+{
+    "authors": [
+        {
+            "name": "Michael Cummings",
+            "email": "mgcummings@yahoo.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "peol\\": ["lib/", "bin/", "tests/"]
+        }
+    },
+    "description": "Php End Of Line is a group Non-OS specific PHP commands to change line endings on text files",
+    "homepage": "https://github.com/Dragonrun1/peol",
+    "keywords": ["dos2unix", "unix2dos", "eol", "cli", "peol", "text", "git"],
+    "license": "GPL-3.0+",
+    "minimum-stability": "stable",
+    "name": "Dragonrun1/peol",
+    "require": {
+        "ext-date": "*",
+        "ext-SPL": "*",
+        "php": ">=5.3.2",
+        "symfony/console": "~2.4"
+    }
+}
