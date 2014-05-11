@@ -42,7 +42,9 @@ class ToWinCommand extends AbstractConverterCommand
      */
     protected function configure()
     {
-        $this->setDescription('Convert file(s) to Windows (DOS) text file format');
+        $this->setDescription(
+            'Convert file(s) to Windows (DOS) text file format'
+        );
         parent::configure();
     }
     /**

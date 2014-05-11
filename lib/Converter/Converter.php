@@ -28,8 +28,8 @@
  */
 namespace peol\Converter;
 
-use FilesystemIterator;
 use FilesystemIterator as FSI;
+use FilesystemIterator;
 use peol\Exception\PeolFileException;
 use peol\Exception\PeolPathException;
 
@@ -216,7 +216,7 @@ class Converter implements ConverterInterface
     }
     /**
      * @param string $path
-     * @param bool $absoluteRequired
+     * @param bool   $absoluteRequired
      *
      * @throws PeolPathException
      * @return string

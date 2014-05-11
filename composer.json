@@ -15,7 +15,7 @@
     "keywords": ["dos2unix", "unix2dos", "eol", "cli", "peol", "text", "git"],
     "license": "GPL-3.0+",
     "minimum-stability": "stable",
-    "name": "Dragonrun1/peol",
+    "name": "dragonrun1/peol",
     "require": {
         "ext-date": "*",
         "ext-SPL": "*",

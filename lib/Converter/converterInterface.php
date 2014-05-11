@@ -40,13 +40,13 @@ interface ConverterInterface
     const UNIX_EOL = "\n";
     const WIN_EOL = "\r\n";
     /**
-     * @param string[]             $endOfLineMap  Associative array of file
+     * @param string[] $endOfLineMap              Associative array of file
      *                                            names and line endings.
-     * @param string[]             $paths         List of paths to search for
+     * @param string[] $paths                     List of paths to search for
      *                                            files to convert. If empty
      *                                            uses current/present working
      *                                            directory from getcwd().
-     * @param string[]             $excludedFiles List of files that should be
+     * @param string[] $excludedFiles             List of files that should be
      *                                            excluded from having line
      *                                            endings changed.
      *

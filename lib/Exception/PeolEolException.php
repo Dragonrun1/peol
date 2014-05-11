@@ -23,8 +23,8 @@
  * available in the GNU-GPL.md file.
  *
  * @copyright 2014 Michael Cummings
- * @license http://www.gnu.org/copyleft/lesser.html GNU LGPL
- * @author Michael Cummings <mgcummings@yahoo.com>
+ * @license   http://www.gnu.org/copyleft/lesser.html GNU LGPL
+ * @author    Michael Cummings <mgcummings@yahoo.com>
  */
 namespace peol\Exception;
 
