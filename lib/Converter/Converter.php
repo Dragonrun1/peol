@@ -166,7 +166,7 @@ class Converter implements ConverterInterface
         $path = trim($path, '/');
         // Drop pointless consecutive "/"s.
         while (false !== strpos($path, '//')) {
-            str_replace('//', '/', $path);
+            $path = str_replace('//', '/', $path);
         }
         // Drop pointless consecutive "*"s.
         while (false !== strpos($path, '**')) {
@@ -229,14 +229,17 @@ class Converter implements ConverterInterface
         // Optional root prefix.
         $regExp .= '(?<root>(?:[[:alpha:]]:/|/)?)';
         // Actual path.
-        $regExp .= '(?<path>(?:[[:alnum:] *?_-]*|\.\.|\.)'
-            . '(?:/(?:[[:alnum:] *?_-]*|\.\.|\.|/))*)$%';
+        $regExp .= '(?<path>(?:[[:print:]]*))$%';
         $parts = array();
         if (!preg_match($regExp, $path, $parts)) {
             $mess = 'Path is not valid was given ' . $path;
             throw new PeolPathException($mess);
         }
         $wrappers = $parts['wrappers'];
+        // vfsStream does NOT allow absolute path.
+        if ('vfs://' == substr($wrappers, -6)) {
+            $absoluteRequired = false;
+        }
         if ($absoluteRequired && empty($parts['root'])) {
             $mess = 'Path NOT absolute missing drive or root given ' . $path;
             throw new PeolPathException($mess);
